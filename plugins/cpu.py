@@ -1,10 +1,12 @@
 # coding: utf-8
 import psutil
-class cpu(object):
+
+
+class CPU():
     def __init__(self):
-        self.__interval = 1 # todo 从配置读取间隔时间
+        self.__interval = 1  # todo 从配置读取间隔时间
         self.cpuLogicalCount = psutil.cpu_count()
-        self.cpuPhysicalCount = psutil.cpu_count(logical=False)
+        self.cpuPhysicalCount = psutil.cpu_count(logical=False)  # 子机热扩容获取到的没更新怎么搞?
         self.cpuUsageTotal = self.cpuUsagePercent
 
     def cpuUsagePercent(self, interval=None):
