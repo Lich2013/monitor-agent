@@ -1,0 +1,13 @@
+{
+  "disk": {},
+  "uuid": "",
+  "mem": {},
+  "interval": 10,
+  "updateurl": "http://localhost/json.php",
+  "secret": "",
+  "uploadurl": "http://www.baidu.com",
+  "cpu": {
+    "interval": 10
+  },
+  "network": {}
+}
