@@ -2,6 +2,7 @@
 import psutil
 from config.config import Config
 
+
 class CPU():
     def __init__(self):
         self.__interval = Config.config['interval']
