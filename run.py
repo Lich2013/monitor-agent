@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# encoding:utf-8
+# encoding: utf-8
 from daemon import runner
 from common.AgentDaemon import AgentDaemon
 
