@@ -9,5 +9,6 @@
   "cpu": {
     "interval": 10
   },
-  "network": {}
+  "network": {},
+  "processes": []
 }
