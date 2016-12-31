@@ -1,9 +1,13 @@
+# coding: utf-8
 import logging
 import os
-from . import currenDir
-class AgentLog(logging):
+
+from common import currentDir
+
+
+class AgentLog():
     def __init__(self, logFile='tmp.log'):
-        logDir = os.path.join(currenDir, "log")
+        logDir = os.path.join(currentDir, "log")
         if not os.path.isdir(logDir):
             try:
                 os.mkdir(logDir, 0755)
@@ -16,5 +20,5 @@ class AgentLog(logging):
         format = self.logging.Formatter('%(asctime)s %(filename)s [line:%(lineno)d] %(levelname)s %(message)s')
         handler.setFormatter(format)
         self.logger.addHandler(handler)
-        self.logger.setLevel(logging.INFO) #TODO: 从配置中读取
+        self.logger.setLevel(logging.INFO)  # TODO: 从配置中读取
         self.logger.info("Start log the machine status")
