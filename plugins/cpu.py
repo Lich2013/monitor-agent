@@ -5,7 +5,7 @@ from config.config import Config
 
 class CPU():
     def __init__(self):
-        self.__interval = Config.config['interval']
+        self.__interval = 10
         self.cpuLogicalCount = psutil.cpu_count()
         self.cpuPhysicalCount = psutil.cpu_count(logical=False)  # 子机热扩容获取到的没更新怎么搞?
         self.cpuUsageTotal = self.cpuUsagePercent
